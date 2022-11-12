@@ -1,11 +1,13 @@
-const assert = require('chai').assert;
+const chai = require('chai');
+chai.use(require("chai-sorted"));
+
+const { assert, expect } = chai;
 
 const Airport = require('../Airport');
 
-const Plane = require('../plane/Plane');
-const MilitaryPlane = require('../plane/MilitaryPlane');
-const PassengerPlane = require('../plane/PassengerPlane');
-const ExperimentalPlane = require('../plane/ExperimentalPlane');
+const MilitaryPlane = require('../planes/MilitaryPlane');
+const PassengerPlane = require('../planes/PassengerPlane');
+const ExperimentalPlane = require('../planes/ExperimentalPlane');
 
 const MilitaryType = require('../models/militaryTypes');
 const ExperimentalTypes = require('../models/experimentalTypes');
