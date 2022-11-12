@@ -25,7 +25,7 @@ class Airport {
         return this.getPlaneByInstance(MilitaryPlane);
     }
 
-    getExperimentalPlane() {
+    getExperimentalPlanes() {
         return this.getPlaneByInstance(ExperimentalPlane);
     }
 
@@ -38,9 +38,8 @@ class Airport {
     }
 
     getMilitaryPlaneByType(type) {
-        return this.militaryPlanes.filter(
-          (plane) => plane.militaryType === type
-        );
+        return this.getMilitaryPlanes().filter(
+            (plane) => plane.militaryType === type);
     }
 
     getTransportMilitaryPlanes(){
